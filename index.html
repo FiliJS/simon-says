@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simon Says</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/game.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__title">
+        <h1 class="header__text">
+          Simon Says
+        </h1>
+      </div>
+    </header>
+    <section class="gameboard">
+      <div class="game">
+        <div
+          id="light-blue"
+          class="game__color light-blue"
+          data-color="lightBlue"
+          data-sound="one"
+        ></div>
+        <div
+          id="violet"
+          class="game__color violet"
+          data-color="violet"
+          data-sound="two"
+        ></div>
+        <div
+          id="orange"
+          class="game__color orange"
+          data-color="orange"
+          data-sound="three"
+        ></div>
+        <div
+          id="green"
+          class="game__color green"
+          data-color="green"
+          data-sound="four"
+        ></div>
+      </div>
+    </section>
+    <section class="start" id="level-modal">
+      <div class="start__box">
+        <div class="start__content">
+          <div class="start__text">
+            Select a level
+          </div>
+          <div class="start__buttons">
+            <button id="btnStart" class="btn-start" onclick="startGame()">
+              Easy
+            </button>
+            <button id="btnStart" class="btn-start" onclick="startNormalGame()">
+              Normal
+            </button>
+            <button id="btnStart" class="btn-start" onclick="startHardGame()">
+              Hard
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="details">
+      <div class="details__level">
+        <strong class="details__text"
+          >Level:
+          <span class="u-color-yellow" id="current-level">1</span></strong
+        >
+      </div>
+      <div class="details__points">
+        <strong class="details__text"
+          >Score: <span class="u-color-red" id="current-score">0</span></strong
+        >
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>
